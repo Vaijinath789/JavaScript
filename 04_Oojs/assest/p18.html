@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>Object.freeze()</h1>
+    </center>
+    <hr>
+
+    <script>
+        const user = {
+            name:"ramu",
+            email:"user@example.com",
+            age:24
+        };
+
+        Object.defineProperty(user,"mobiles",{
+            value:"17391873",
+            writable:true
+        });
+
+        console.log('before user =',user);
+
+        Object.freeze(user); //whole object is readable
+
+        user.name = "Naveen";
+        user.mobile = "83164812";
+
+        console.log('after freeze =',user);
+    </script>
+</body>
+</html>

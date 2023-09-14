@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ooj</title>
+</head>
+<body>
+    <center>
+        <h1>Write The protected Value</h1>
+    </center>
+    <hr>
+
+    <script>
+        var user ={};
+
+        Object.defineProperties(user,{
+            name:{
+                value:"Vaiji",
+                writable:true   //it can be edit as shown in below
+            },
+            email:{
+                value:"vaiji@gmail.com",
+                writable:false     //false means does not edit email
+            },
+            mobile:{
+                value:"9632870820",
+                writable:true
+            }
+        });
+
+        console.log('before user =',user);
+
+        user.name = 'RAj Kumar';
+        user.email = 'vaiji@gmail12.com';
+        user.mobile = "9632870820";
+
+        console.log('after user =',user);
+
+        document.write(`<h1> name = ${user.name}</h1>`);
+        document.write(`<h1> name = ${user.email}</h1>`);
+        document.write(`<h1> name = ${user.mobile}</h1>`);
+        
+    </script>
+</body>
+</html>

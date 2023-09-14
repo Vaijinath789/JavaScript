@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        use switch key = add,sub,mul,div,rem a and b
+    </h1>
+    <form onsubmit="codeHandler(event)">
+        <div>
+            <label for="op">choose an operation</label>
+            <select name="op" id="op">
+                <option value="add">Addition</option>
+                <option value="sub">Subtract</option>
+                <option value="mul">multiplication</option>
+                <option value="div">Division</option>
+                <option value="mod">Module</option>
+            </select>
+        </div>
+        <div>
+            <label for="inputA">Enter the a?</label>
+            <input type="number" name="inputA" id="inputA" required>
+        </div>
+
+        <div>
+            <label for="inputB">Enter the b?</label>
+            <input type="number" name="inputB" id="inputB" required>
+        </div>
+        <button type="submit"> EXECUTE CODE</button>
+    </form>
+    <div id="result"></div>
+    <script>
+        function codeHandler(event) {
+            event.preventDefault(); //avoid page refresh
+
+            var key = document.getElementById('op').value;
+            var a = document.getElementById('inputA').value;
+            var b = document.getElementById('inputB').value;
+            //constructor ~number ,boolean,string ,Array ,object
+
+            var x = Number(a);
+            var y= Number(b);
+            var res =0;
+
+            switch(key) {
+                case "add":
+                    res = x+y;
+                    document.title =`Addition =${res}`;
+                    document.getElementById('result').innerHTML = `<h1>Addition of 2 number = ${res}</h1>`;
+                    break;
+                
+                case "sub":
+                    res = x-y;
+                    document.title =`sub =${res}`;
+                    document.getElementById('result').innerHTML = `<h1> sub of 2 number = ${res}</h1>`;
+                    break;
+
+                case "mul":
+                    res = x*y;
+                    document.title =`mul =${res}`;
+                    document.getElementById('result').innerHTML = `<h1>mul of 2 number = ${res}</h1>`;
+                    break;
+
+                case "div":
+                    if(x>y){
+                        res =x/y;
+                    }
+                    else{
+                        res=y/x;
+                    }
+                    // res = x+y;
+                    document.title =`div =${res}`;
+                    document.getElementById('result').innerHTML = `<h1>div of 2 number = ${res}</h1>`;
+                    break;
+
+                case "mod":
+                if(x>y){
+                        res =x%y;
+                    }
+                    else{
+                        res=y%x;
+                    }
+                    
+                    document.title =`mod =${res}`;
+                    document.getElementById('result').innerHTML = `<h1>mod of 2 number = ${res}</h1>`;
+                    break;
+                default:document.title = `choose proper input`;
+                        document.getElementById('result').innerHTML = `<h1>choose proper input</h1>`;
+            }
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>play(),Pause() and fullscreen()</h1>
+    </center>
+
+    <hr>
+    
+    <video src="assest/media/desktop.mp4" height="300" id="videoFile"></video>
+
+    <button onclick="PlayHandler()">Play</button>
+    <button onclick="PauseHandler()">Pause</button>
+    <button onclick="FullScreen()">FullScreen</button>
+
+    <script>
+        function PlayHandler() {
+            document.getElementById("videoFile").play();
+        }
+
+        function PauseHandler() {
+            document.getElementById("videoFile").pause();
+        }
+
+        function FullScreen() {
+            document.getElementById("videoFile").requestFullscreen();
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+            var container = document.querySelector('userInfo');
+            users.forEach(function(val,index){
+                //ctrate html element
+
+                let card=document.createElement('div');
+                let eImage =document.createElement('img');
+                let eName =document.createElement('h3');
+                let eEmail=document.createElement('p');
+                let eisAdmin=document.createElement('p');
+                let eLink = document.createElement('a');
+
+                //add contents /data to the element
+
+                eImage.src =val.image;
+                eImage.alt = "No Image";
+                eName.textContent = `${val.id} ${val.name}`;
+                eEmail.textContent = val.email;
+
+
+
+                card.appendChild(eImage);
+                
+
+                container.appendChild(card);
+
+            })
+      </script>
+</body>
+</html>

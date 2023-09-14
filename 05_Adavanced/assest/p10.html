@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        section{
+            width: 100%;
+            overflow-x: hidden;
+            display: grid;
+            grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+            grid-gap: 10px;
+        }
+        article{
+            background-color: rgba(0,0,0,0.4);
+            color:white;
+            padding: 20px;
+            text-align: justify;
+            border-radius: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.9);
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h3>fetch()</h3>
+    
+    <section id="block"></section>
+    <script>
+
+        fetch('https://jsonplaceholder.typicode.com/users')
+        .then(Response => Response.json())
+        .then(res => {
+            console.log('res=',res);
+            print(res);
+        })
+        .catch(err => console.log(err.message));
+
+        let blk = document.querySelector("#block");
+
+        function print(data){
+            data.forEach(item =>{
+                //create an html tags
+                let article = document.createElement('article');
+                let h4 = document.createElement("h4");
+                let p = document.createElement("p");
+                let p1 = document.createElement("p");
+                let p2 = document.createElement("p");
+                let p3 = document.createElement("p");
+                let p4 = document.createElement("p");
+               
+
+
+                //add text content
+                h4.textContent = item.id;
+                p.textContent = item.name;
+                p1.textContent = item.username;
+                p2.textContent = item.email;
+                p3.textContent = item.name;
+                p4.textContent=item.address.street;
+                
+
+                //appending to min node
+                article.appendChild(h4);
+                article.appendChild(p);
+                article.appendChild(p1);
+                article.appendChild(p2);
+                article.appendChild(p3);
+                article.appendChild(p4);
+               
+
+                blk.appendChild(article);
+            })
+        }
+    </script>
+</body>
+</html>

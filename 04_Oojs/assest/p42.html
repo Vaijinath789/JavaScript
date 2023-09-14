@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>private members inside the class</h1>
+    </center>
+    <script>
+        class Company{
+            constructor(){
+                const emp =[]; //private member
+            
+            //setter method
+            this.addEmp = function(val){
+                emp.push(val);
+                return emp;
+            }
+
+            //getter methodth
+            this.getEmp = function(){
+                return emp.shift();
+            }
+        }
+    }
+
+    let x = new Company();
+
+    console.log('instance x= ', x);
+
+    //public member to add value
+    x.addEmp('John');
+    x.addEmp('Robber');
+    x.addEmp('Michel');
+
+    //public member to read values
+    console.log('first =',x.getEmp());
+    console.log('Second =',x.getEmp());
+    console.log('third =',x.getEmp());
+    </script>
+</body>
+</html>

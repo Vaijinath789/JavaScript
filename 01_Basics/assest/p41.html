@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section id ="userInfo"></section>
+    <script>
+          var products = [
+         {
+          id: 1,
+          title: "iPhone Galaxy +1", // only title was updated
+          description: "An apple mobile which is nothing like apple",
+          price: 549,
+          discountPercentage: 12.96,
+          rating: 4.69,
+          stock: 94,
+          brand: "Apple",
+          category: "smartphones",
+          thumbnail: "http://dummyjson.com/data/product/1/thumbnail.jpg",
+         },
+
+         {
+          id: 1,
+          title: "iPhone Galaxy +1", // only title was updated
+          description: "An apple mobile which is nothing like apple",
+          price: 549,
+          discountPercentage: 12.96,
+          rating: 4.69,
+          stock: 94,
+          brand: "Apple",
+          category: "smartphones",
+          thumbnail: "http://dummyjson.com/data/product/1/thumbnail.jpg",
+         },
+
+         {
+          id: 1,
+          title: "iPhone Galaxy +1", // only title was updated
+          description: "An apple mobile which is nothing like apple",
+          price: 549,
+          discountPercentage: 12.96,
+          rating: 4.69,
+          stock: 94,
+          brand: "Apple",
+          category: "smartphones",
+          thumbnail: "http://dummyjson.com/data/product/1/thumbnail.jpg",
+         }
+        ] 
+        var container = document.querySelector('userInfo');
+            products.forEach(function(val,index){
+                //ctrate html element
+
+                let card=document.createElement('div');
+                let eId = document.createElement('p');
+                let eTitle = document.createElement('h3');
+                let eDes = document.createElement('p');
+                let ePrice = document.createElement('p');
+                let eDis = document.createElement('p');
+                let eRating = document.createElement('p');
+                let eStock = document.createElement('p');
+                let eCategory = document.createElement('p');
+                let eImage = document.createElement('img');
+
+                //add contents /data to the element
+
+                eId.textContent = val.id;
+                eDes.textContent = val.description;
+                ePrice.textContent = val.Price;
+
+                card.appendChild(eId);
+                card.appendChild(eTitle);
+                card.appendChild(eDes);
+
+                container.appendChild(card);
+
+
+            })
+        </script> 
+</body>
+</html>

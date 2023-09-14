@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #txt{
+            background-color: teal;
+            color: #fff;
+            padding: 12px;
+            width: 50%;
+            height: 500px;
+            overflow: auto;
+        }
+
+        h4{
+            padding: 10px;
+            background-color: blue;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>onmousewheel() and onscroll()</h1>
+    </center>
+
+    <h4 id="output"></h4>
+
+    <div id="txt" onmousewheel="whellHandler()" onscroll="whellHandler()">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, optio? Commodi asperiores aliquam eveniet quam perferendis esse enim animi dolorem deleniti! Tempora, error delectus! Vel quis quam aspernatur molestias sed!  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia nesciunt fugit, ipsum odio voluptates distinctio recusandae necessitatibus a vero nisi rem ipsam dolores, voluptatum aperiam doloremque vitae aliquid repellendus voluptatibus.  consectetur adipisicing elit. Modi, optio? Commodi asperiores aliquam eveniet quam perferendis esse enim animi dolorem deleniti! Tempora, error delectus! Vel quis quam aspernatur molestias sed!  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia nesciunt fugit, ipsum odio voluptates distinctio recusandae necessitatibus a vero nisi rem ipsam dolores, voluptatum aperiam doloremque vitae aliquid repellendus voluptatibus.
+            consectetur adipisicing elit. Modi, optio? Commodi asperiores aliquam eveniet quam perferendis esse enim animi dolorem deleniti! Tempora, error delectus! Vel quis quam aspernatur molestias sed!  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia nesciunt fugit, ipsum odio voluptates distinctio recusandae necessitatibus a vero nisi rem ipsam dolores, voluptatum aperiam doloremque vitae aliquid repellendus voluptatibus.
+            consectetur adipisicing elit. Modi, optio? Commodi asperiores aliquam eveniet quam perferendis esse enim animi dolorem deleniti! Tempora, error delectus! Vel quis quam aspernatur molestias sed!  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia nesciunt fugit, ipsum odio voluptates distinctio recusandae necessitatibus a vero nisi rem ipsam dolores, voluptatum aperiam doloremque vitae aliquid repellendus voluptatibus.
+            consectetur adipisicing elit. Modi, optio? Commodi asperiores aliquam eveniet quam perferendis esse enim animi dolorem deleniti! Tempora, error delectus! Vel quis quam aspernatur molestias sed!  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia nesciunt fugit, ipsum odio voluptates distinctio recusandae necessitatibus a vero nisi rem ipsam dolores, voluptatum aperiam doloremque vitae aliquid repellendus voluptatibus.
+            consectetur adipisicing elit. Modi, optio? Commodi asperiores aliquam eveniet quam perferendis esse enim animi dolorem deleniti! Tempora, error delectus! Vel quis quam aspernatur molestias sed!  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia nesciunt fugit, ipsum odio voluptates distinctio recusandae necessitatibus a vero nisi rem ipsam dolores, voluptatum aperiam doloremque vitae aliquid repellendus voluptatibus.
+        </p>
+
+    </div>
+
+    <script>
+        function whellHandler(){
+            let element=document.getElementById("txt");
+
+            document.getElementById("output").innerHTML=element.scrollTop + "px"
+        }
+    </script>
+
+</body>
+</html>

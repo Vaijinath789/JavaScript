@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>class ES-6</h1>
+    </center>
+    <hr>
+
+    <h3>Class Synatx contains two components</h3>
+    <ol>
+        <li>Class Declarations</li>
+        <li>Class Expression</li>
+    </ol>
+    <hr>
+    <script>
+        document.write('<h1>Class Declarations</h1>');
+
+        class User{
+            //buit in method
+            constructor(){
+                //property
+                this.name ="Mohan";
+                this.email = "test@example.com";
+                document.write('<h1>constructor method</h1>');
+            }
+            //method
+            display(){
+                document.write(`<h1> name is ${this.name}</h1>`);
+            }
+
+            print(){
+                document.write('<h1> email is ${this.email}</h1>');
+            }
+        }
+
+        let x = new User();
+        console.log('x=' ,x);
+
+
+    </script>
+</body>
+</html>

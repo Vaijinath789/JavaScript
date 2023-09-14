@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>Array using constructor</h1>
+    </center>
+    <script>
+        var x=new Array();
+        x[0]="blue";
+        x[1]="red";
+        x[2]="green";
+        x[3]="white";
+
+        document.write(`<h3>${ x} </h3>`);
+        document.write(`<h3>${ x[3]} </h3>`);
+
+        x.forach(function(item){
+            document.write(`<h3>${ item} </h3>`)
+        });
+    </script>
+</body>
+</html>

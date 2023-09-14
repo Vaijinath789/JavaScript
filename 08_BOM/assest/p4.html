@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOMt</title>
+</head>
+<body>
+    <script>
+        function getViews(){
+            alert("YOu have accessed"+ history.length+"web pages in this session,");
+        }
+    </script>
+    <button type="button" onclick="getViews();">Get views count</button>
+    <a href="p5.html">open p5.html</a>
+    <script>
+        function getForward(){
+            window.history.forward();
+        }
+    </script>
+    <button type="button" onclick="getForward();">Go Forward</button>
+    <script>
+       // window.history.go(-2); //Go back 2 pages
+        // window.history.go(-1); //Go back 1 pages
+         // window.history.go(0); //Reload the current page
+          // window.history.go(1); //Go forward 1 pages
+           // window.history.go(2); //Go forward 2 pages
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            width: 100%;
+            height: 100vh;
+            background-color: aliceblue;
+        }
+        .blk{
+            width: 50%;
+            background-color: red;
+            color: aliceblue;
+            padding: 12px;
+        }
+    </style>
+</head>
+<body oncontextmenu="contextHandler(event)">
+    <h3>oncontextmenu()</h3>
+    <div class="blk" id="blk">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos facilis labore ipsa cum tenetur voluptates minus, perferendis voluptate facere odit impedit aliquam illum maiores eveniet cumque totam. Officiis, fugiat minus?
+        Doloribus voluptatum, unde fuga modi doloremque voluptate facilis excepturi eveniet quisquam harum neque, quod voluptatibus ipsam, omnis ad aliquid natus tenetur. Sit numquam facilis sunt in, exercitationem ad at odit.
+        Iure minus error ipsa, exercitationem illum cum possimus commodi architecto vero necessitatibus eligendi provident saepe et dolorum rerum ipsam aliquid. Reiciendis corporis saepe nihil id blanditiis? Hic distinctio tempore obcaecati.
+        Nihil, aut. Veniam suscipit, quisquam illo non rerum atque? Asperiores praesentium distinctio debitis laborum qui mollitia sed labore maxime, perspiciatis necessitatibus corrupti odio veritatis nostrum assumenda, cum nobis, similique amet.
+        Eius esse accusantium culpa minima hic maxime, tempora facere. Nobis, iusto inventore repellat ipsa delectus consectetur nisi maxime hic doloremque quibusdam, nostrum eos laboriosam fugiat consequatur maiores doloribus corrupti nemo?
+        Nam eum inventore, ea sunt natus praesentium autem reiciendis hic voluptas, dolorem tenetur consequatur fuga obcaecati, molestias tempora repellendus repudiandae cum cumque voluptate excepturi ad quos facilis. Dolor, eum totam!
+        Ipsa eum laudantium quos ipsam omnis rem laboriosam, nesciunt, optio placeat vitae voluptates dolorum nostrum, pariatur nisi excepturi. Molestiae, reprehenderit! Optio voluptatem dolor laborum quis fugit maxime ut vel vitae!
+        Molestias quae tempora, dolorem quaerat mollitia consectetur facilis numquam id maiores possimus unde ipsa necessitatibus doloremque tenetur accusantium reprehenderit adipisci fugiat qui ad quibusdam aperiam magni! Odio neque esse alias?</p>
+
+    </div>
+    <script>
+        function contextHandler(event){
+            event.preeventDefault();//avoid page refresh
+            alert("Right click has disablrd");
+        }
+    </script>
+    
+</body>
+</html>

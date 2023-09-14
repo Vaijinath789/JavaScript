@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>dynamic method names inside class</h1>
+    </center>
+    <hr>
+
+    <script>
+        //symbol declaration
+        let META = Symbol('metadata');
+
+        class Car{
+            constructor(br,mod){
+                this.brand =br;
+                this.model =mod;
+            }
+
+            //[dynamic method name](){}
+
+            [META](){
+                //dynamic functions
+                return {
+                    brand:this.brand,
+                    model:this.model
+                }
+            }
+        }
+
+        let x = new car('Mahindra',2023);
+        console.log(x);
+
+        console.log('dynamic method =',META);
+
+        console.log('Result =',x[META]())
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Split()</h1>
+    <script>
+        var str ="How is $everything g$oing";
+
+        const re =" ";
+        var reg =/\$|\$o/;
+
+        console.log(`${str.split(re)}`);
+        console.log(`${str.split(reg)}`);
+    </script>
+</body>
+</html>
+
+^ ->defines the begining of the pattern
+$ ->defines the ending of the pattern
+[] ->character set
+() ->capturing group that group of multiple character sets
+
+[abcdef] ->matches any single occurrence of any of the characters a,b,c,d,e,f
+[a-z] ->matches any single lowercase letter
+[A-Z] ->matches any single uppercase letter
+[a-zA-Z] ->matches any single letter from a-z ignoring the case 
+            . ->matches any character except line break /n
+            ? ->matches 0 and 1 occurrence of the preceding character,set or group

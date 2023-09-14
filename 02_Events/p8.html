@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>Media Event</h1>
+    </center>
+    <hr>
+
+    <h3 id="msg"></h3>
+
+    <video src="assest/media/desktop.mp4" height="200" controls="playHan()" onpause="pauseHan()" onvolumechange="volHan()" onseeking="seekHan()"></video>
+
+    <script>
+        var msg=document.getElementById("msg");
+
+        function playHan() {
+            msg.innerHTML="Started playing Video";
+            msg.style.color="green";
+        }
+
+        function pauseHan() {
+            msg.innerHTML="Video paused";
+            msg.style.color="red";
+        }
+
+        function volHan() {
+            msg.innerHTML="Changing volume";
+            msg.style.color="deepskyblue";
+        }
+
+        function seekHan() {
+            msg.innerHTML="video timing is changing";
+            msg.style.color="cyan";
+        }
+
+
+    </script>
+</body>
+</html>

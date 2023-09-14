@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>Onsubmit and Onreset (form event)</h1>
+    </center>
+    <hr>
+    <h3 id="out"></h3>
+    <form onsubmit="subHandler(event)" onreset="resetHandler()">
+    <label for="">Username</label>
+    <input type="text" name="user" id="user">
+    <br><br>
+
+    <label for="pass">Password</label>
+    <input type="password" name="pass" id="pass">
+    <input type="checkbox" name="showPass" id="showPass"><span id="txt" >show password</span>
+    <br><br>
+
+    <button type="submit">Login</button>
+
+    </form>
+</body>
+</html>

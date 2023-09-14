@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>marks = 70-100(A) 50-70(B) 35-50(c)==35(d) ,Fail</h1>
+    <script>
+        var marks=56;
+
+        if(marks >=70 || marks<=100){
+            document.write(`<h2>First condition is false and second condition is true</h2>`);
+        }
+        else if(marks >=50 || marks<70){
+            document.write(`<h2>First condition and second condition is true</h2>`);
+        }
+        else if(marks >35|| marks<50){
+            document.write(`<h2>First condition and second condition is true</h2>`);
+        }
+        else if(marks ===35){
+            document.write(`<h2> condition is falls</h2>`);
+        }
+        else{
+            document.write(`<h2>Invalide</h2>`);
+        }
+    </script>
+</body>
+</html>

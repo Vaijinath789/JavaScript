@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>IsFinite()</h3>
+    <script>
+        document.write(`<h3> IsFinite(123) = ${ isFinite(123)}</h3>`);
+        document.write(`<h3> IsFinite(-12.33) = ${ isFinite(-12.33)}</h3>`);
+        document.write(`<h3> IsFinite(12-3) = ${ isFinite(12-3)}</h3>`);
+        document.write(`<h3> IsFinite(0) = ${ isFinite(0)}</h3>`);
+        document.write(`<h3> IsFinite("123") = ${ isFinite("123")}</h3>`);
+        document.write(`<h3> IsFinite(true) = ${ isFinite(true)}</h3>`); //true
+
+        document.write(`<h3> IsFinite= isFinite("be-praticale") =${ isFinite("be-praticle")}</h3>`); //false
+        document.write(`<h3> IsFinite= isFinite("21/2/5") =${ isFinite("21/2/5")}</h3>`); //false
+        document.write(`<h3> IsFinite= isFinite(0/0) =${ isFinite(0/0)}</h3>`); //false
+
+        document.write(`<h3> ${Number(true)}`);
+        document.write(`<h3> ${Number(false)}`);
+    </script>
+</body>
+</html>

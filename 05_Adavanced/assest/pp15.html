@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Local Storage</h1>
+
+    <div>
+        <form  autocomplete="off" id="userForm">
+            <div>
+                <label for="name">Enter Name</label>
+                <input type="text" name="name" id="name" required>
+            </div>
+
+            <div>
+                <input type="submit" value="Add User">
+            </div>
+        </form>
+    </div>
+    <hr>
+    <h1 id="info"></h1>
+    <button onclick="deleteHandler()">Delete user</button>
+    <script>
+        let userForm =document.getElementById("userForm");
+        let fname =document.getElementById('name');
+        let info =document.getElementById('info');
+
+        //delete handler
+        function deleteHandler(){
+            if(confirm('Are you sure you want to delete user')){
+                if(localStorage.getItem("user")){
+                    localStorage.removeItem("user");
+                    alert("User deleted successfully");
+                    window.location.reload();
+                }else{
+                    alert("No user Info exits")
+                }
+            }else{
+                alert("Delete Terminated");
+            }
+        }
+
+        //set handler
+        userForm.addEventListener('submit',async(event) =>{
+            localStorage.setItem('user',fname.value);
+            alert("user name added");
+        });
+
+        //get Handler
+        (function(){
+            if(localStorage.getItem('user')) {
+                info.innerText =`username is ${ localStorage.getItem('user')}`;
+            }else{
+                info.innerText ='No user Exits';
+            }
+        })()
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section id="blk"></section>
+    <button type="button" onclick="addContent()">Add Block</button>
+    <button type="button" onclick="removeContent()"> Remove Content</button>
+
+    <script>
+        function addContent(){
+            let content = `
+            <h1>Hii Tejas </h1>
+            <h3>Hlo Pi </h3>
+            <p>lorem text jrhfzisr ijszfukszujj irssuoassic </p>
+            <button onclick="removeContent()">Remove Block</button>
+                `;
+                document.getElementById('blk').innerHTML = content;
+
+        }
+        function removeContent(){
+            document.getElementById("blk").innerHTML="";
+        }
+    </script>
+    <hr>
+    <button type="button" onclick="addElement();" >Create Element</button>
+    <script>
+        function addElement(){
+            let p = document.createElement("p");
+            console.log(p);
+
+            let data = document.createTextNode("lorem yfhksfjlgdd ksfnkjsjk jknfskjkjsf fskjnfsjjfsjk who wewre providing this to our society to build a number of w webpagess erkji ");
+            console.log(p);
+             p.appendChild(data);
+             console.log(p);
+
+             document.body.appendChild(p);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function User() {
+            this.name="John";
+            this.email="john@example.com";
+            this.age=22;
+            let a =12;
+        };
+
+       let x =new User();
+
+       console.log('COnstructure instance',x);
+
+       document.write(`<h1>name = ${x.name}</h1>`);
+       document.write(`<h1>email = ${x.email}</h1>`);
+       document.write(`<h1>age = ${x.age}</h1>`);
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>With parameter, Without value example,,</h2>
+    <script>
+        function stuDetails(firstName, lastName){
+            document.write(`<p>first parameter value is :${firstName}</p>` );
+            document.write(`<p>last parameter value is :${lastName}</p>` );
+           let fn,ln,fullName;
+
+           fn=firstName;
+           ln=lastName;
+
+           document.write(`<p>first Variable value is :${fn}</p>` );
+           document.write(`<p>second Variable value is :${ln}</p>` );
+           
+           fullName=fn+" "+ln;
+           document.write(`<p>full name variable value is :${fullName}</p>` );
+        }
+        stuDetails("HTML","CSS");
+
+    </script>
+</body>
+</html>

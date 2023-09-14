@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>PROTOTYPE</h1>
+        <p>prototype keyword - is used to create a property to an Constructor externally</p>
+    </center>
+    <hr>
+
+    <script>
+        function Student(){
+            //local property
+            let name,gender;
+
+            //Constructor property
+            this.name = "acdf";
+            this.gender = "male";
+        }
+
+        let stud=new Student(); //constructor object
+        document.write("<b> stud.name :</b>" +stud.name+ "<br><br>");
+        document.write("<b> stud.gender :</b>" +stud.gender+ "<br><br>");
+
+        stud.age =20;
+        document.write("<b> stud.name :</b>" +stud.age+ "<br><br>"); //undefined
+
+        let stud1 = new Student(); 
+        document.write("<b> stud.name :</b>" +stud1.name+ "<br><br>");
+        document.write("<b> stud.gender :</b>" +stud1.gender+ "<br><br>");
+        document.write("<b> stud.age :</b>" +stud1.age+ "<br><br>");
+
+        Student.prototype.age1 =30;
+
+        let student1 = new Student();
+        document.write("<b> student1.age1 :</b>" +student1.age1+ "<br><br>");
+
+        let student2 = new Student();
+        document.write("<b> student2.age1 :</b>" +student2.age1+ "<br><br>");
+    </script>
+</body>
+</html>

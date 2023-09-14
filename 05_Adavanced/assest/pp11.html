@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="block">
+        <h1>Worker Details Form</h1>
+    </div>
+
+    <script>
+  
+
+    //create elemts
+    fetch('https://jsonplaceholder.typicode.com/produnts')
+        .then(Response => Response.json())
+        .then(res => {
+            console.log('res=',res);
+            print(res);
+        })
+        .catch(err => console.log(err.message));
+
+        let blk = document.querySelector("#block");
+
+        function print(data){
+        data.forEach(item =>{
+        const newTable = document.createElement("table");
+        newTable.innerHTML = "<thead><th>ID</th><th>Name</th><th>Department</th><th>location</th><th>Gender</th><th>Image</th></thead>";
+        const newRow = document.createElement("tr");
+        const tdid = document.createElement("td");
+        const tdtitle = document.createElement("td");
+        const tdDesc = document.createElement("td");
+        const tdprice = document.createElement("td");
+        const tddis = document.createElement("td");
+        const tdrating=document.createElement("td");
+    
+
+        tdid.textContent = data.id;
+        tdtitle.textContent = data.title;  
+        tdDesc.textContent = data.description;
+        tdprice.textContent = data.price; 
+        tddis.textContent = data.diScountPercentage;
+        tdrating.textContent=data.rating;
+        
+
+
+        newRow.appendChild(tdid); 
+        newRow.appendChild(tdtitle);
+        newRow.appendChild(tdDesc);
+        newRow.appendChild(tdprice);
+        newRow.appendChild(tddis);
+        newRow.appendChild(tdrating);
+
+        newTable.appendChild(newRow);
+
+         const blk = document.getElementById('block');
+        blk.appendChild(newTable);
+            })
+        }
+
+
+
+    </script>
+</body>
+</html>
